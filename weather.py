@@ -18,7 +18,7 @@ def main():
     except ApiServiceError:
         print(f"Не удалось получить погоду от сервиса погоды")
         raise exit(1)
-    print(format_weather(weather))
+    print('\n'+format_weather(weather))
 
     save_weather(
         weather,
@@ -27,4 +27,8 @@ def main():
 
 
 if __name__ == "__main__":
+    input("Получить текущую погоду -> [Enter]")
+    print("Выполняется. Ждите...")
     main()
+    print("Завершено.")
+    input("Выйти -> [Enter]")
